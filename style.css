@@ -1,5 +1,5 @@
 body {
-    height:1000px;
+    height:1700px;
     background-image: linear-gradient(#184E68, #57CA85);
 }
 
@@ -18,6 +18,7 @@ tr {
     left:50%;
     transform: translate(-50%, -50%);
     text-align: center;
+
 }
 .center-form {
     color:white;

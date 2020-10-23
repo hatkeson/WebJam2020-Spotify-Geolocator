@@ -5,9 +5,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--<script src="jqurly.js"></script>
-    <script src="APItest.js"></script>-->
+    <!--<script src="jqurly.js"></script>-->
+    <script src="APItest.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
     </head>
 
     <body>   
@@ -21,7 +22,7 @@
             </form>
         </div>
     
-    <table class="center-list">
+    <!--<table class="center-list" style="top:auto">
     <tr>
         <th>#</th>
         <th>Title</th>
@@ -40,7 +41,43 @@
         <td>Another artist</td>
         <td>59:59</td>
     </tr>
-    </table>
+    </table>-->
+        
+        <div id="container" style="margin-left:250px; margin-top:15%; text-align: center; color:white;"></div>
+        <script>
+        var table = document.createElement('table'), tr, td, row, cell;
+        for (row = 0; row < 51; row++) {
+            tr = document.createElement('tr');
+            for (cell = 0; cell < 4; cell++) {
+                td = document.createElement('td');
+                tr.appendChild(td);
+                if(cell==1) {
+                    td.innerHTML="Another Song";
+                }
+                if(cell==2){
+                    td.innerHTML="Another Artist";
+                }
+                if(cell==3){
+                    td.innerHTML="59:59";
+                }
+            }
+        table.appendChild(tr);
+        }
+        
+        document.getElementById('container').appendChild(table);
+        
+        table.rows[0].cells[0].innerHTML="#";
+        table.rows[0].cells[1].innerHTML="Song";
+        table.rows[0].cells[2].innerHTML="Artist";
+        table.rows[0].cells[3].innerHTML="Time";
+        table.rows[1].cells[0].innerHTML="1";
+        table.rows[1].cells[1].innerHTML="Sandstorm";
+        table.rows[1].cells[2].innerHTML="Darude";
+        table.rows[1].cells[3].innerHTML="3:50";
+        
+        for (row=2; row < 51; row++) {
+        table.rows[row].cells[0].innerHTML=row;}</script>
+
         
     </body>
 
